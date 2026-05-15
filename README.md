@@ -1,32 +1,21 @@
 # stochastic-maze-dqn
 
-this was my deep reinforcement learning project for eece 5614
+deep reinforcement learning on a stochastic maze
 
-the environment is a stochastic maze where actions do not always move the agent exactly in the intended direction, and some cells have penalty costs
+this was my dqn project for rl class
 
-for the project i implemented:
+i implemented:
 
 - standard dqn
 - double dqn
 - dueling dqn
 
-the state representation was just the normalized `(x, y)` coordinates of the maze position, and the network learned q-values for the four movement actions
+the maze is stochastic, so the intended action doesnt always happen exactly, and there are penalty cells / walls / a goal state
 
-the repo includes:
+i used normalized `(x, y)` coordinates as the state input and learned q-values for the 4 movement actions
 
-- `project4.ipynb` with the implementation and experiments
-- `project4_report.pdf` with the submitted writeup
-- a few extracted figures from the final report
+mostly i was comparing how the different dqn variants trained and what kind of final policies they learned
 
-what i compared:
+double dqn ended up doing the best in my runs, but standard dqn also worked pretty well and dueling dqn had the cleanest final loss
 
-- training reward / loss trends
-- average episode length
-- effect of learning rate
-- final learned policy / values / sampled path
-
-main result:
-
-all three methods learned a valid path through the maze. standard dqn already worked well, double dqn gave the best final reward in my implementation, and dueling dqn had the cleanest final loss.
-
-the report has the exact setup, hyperparameters, and final numbers.
+the notebook is here, the submitted writeup is `project4_report.pdf`, and i also left a few figures from the report in the repo

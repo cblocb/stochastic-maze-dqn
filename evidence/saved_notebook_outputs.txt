@@ -1,0 +1,80 @@
+rows = 8 cols = 8
+states = 50
+start state = 37 (6, 1)
+goal state = 5 (0, 5)
+
+replay size = 10000
+T_epi = 50
+N_QU = 4
+gamma = 0.99
+N_batch = 64
+alpha = 0.001
+eta = 0.01
+N_epi = 1200
+epsilon_k = max(0.1, 0.995^k)
+state = normalized (x, y) in [0, 1]
+
+
+Standard DQN
+last avg reward = 86.08
+last avg loss = 5.146093838214874
+last avg length = 7.56
+path found = True
+path length = 12
+
+
+
+
+
+
+
+
+learning rate sweep
+small lr = 0.0001 | last avg reward = 17.400000000000023
+base  lr = 0.001 | last avg reward = 86.08
+large lr = 0.01 | last avg reward = 87.4
+
+
+
+Double DQN
+last avg reward = 88.11200000000001
+last avg loss = 4.896332352161408
+last avg length = 6.84
+path found = True
+path length = 12
+
+
+
+
+
+
+
+
+standard vs double
+standard last avg reward = 86.08
+double   last avg reward = 88.11200000000001
+standard last avg length = 7.56
+double   last avg length = 6.84
+
+
+Dueling DQN
+last avg reward = 87.624
+last avg loss = 3.6085251820087434
+last avg length = 7.52
+path found = True
+path length = 12
+
+
+
+
+
+
+
+
+standard vs double vs dueling
+standard last avg reward = 86.08
+double   last avg reward = 88.11200000000001
+dueling  last avg reward = 87.624
+standard last avg length = 7.56
+double   last avg length = 6.84
+dueling  last avg length = 7.52
